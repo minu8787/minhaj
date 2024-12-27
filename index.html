@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4A90E2, #9013FE);
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            width: 400px;
+            text-align: center;
+            transition: 0.3s ease-in-out;
+        }
+
+        .login-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .login-container h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .input-group input:focus {
+            border-color: #4A90E2;
+            outline: none;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+        }
+
+        .btn-login {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(90deg, #4A90E2, #9013FE);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn-login:hover {
+            background: linear-gradient(90deg, #9013FE, #4A90E2);
+            transform: translateY(-3px);
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .forgot-password:hover {
+            color: #4A90E2;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .social-btn.google {
+            background-color: #db4437;
+        }
+
+        .social-btn.google:hover {
+            background-color: #c23321;
+        }
+
+        .social-btn.facebook {
+            background-color: #4267B2;
+        }
+
+        .social-btn.facebook:hover {
+            background-color: #375b9d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login Page</h2>
+    <form action="/submit-login" method="POST">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn-login">Login</button>
+    </form>
+
+    <a href="#" class="forgot-password">Forgot Password?</a>
+
+    <div class="social-login">
+        <button class="social-btn google">Login with Google</button>
+        <button class="social-btn facebook">Login with Facebook</button>
+    </div>
+</div>
+
+</body>
+</html>

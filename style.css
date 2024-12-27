@@ -1,0 +1,17 @@
+body {
+    background:#111;
+    color: #ffffff;
+  }
+  
+  .card {
+    border-radius: 12px;
+  }
+  
+  #bmiValue {
+    font-size: 1.5rem;
+  }
+  
+  #bmiCategory {
+    font-size: 1.2rem;
+    color: #ffc107;
+  }
